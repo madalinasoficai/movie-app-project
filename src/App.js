@@ -13,6 +13,7 @@ import {
   favoritesReducer,
   initialFavoritesState,
 } from "./context/Favorites/reducer";
+import FavoritesPage from "./pages/FavoritesPage";
 
 import { ThemeContext } from "./context/Theme/context";
 import { themeReducer, initialState } from "./context/Theme/reducer";
@@ -47,6 +48,17 @@ const router = createBrowserRouter([
         <Header />
         <main>
           <MovieDetails />
+        </main>
+      </>
+    ),
+  },
+  {
+    path: "/favorites",
+    element: (
+      <>
+        <Header />
+        <main>
+          <FavoritesPage />
         </main>
       </>
     ),

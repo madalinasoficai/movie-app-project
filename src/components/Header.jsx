@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
-import { Navbar, Nav, Container, Button } from "react-bootstrap";
+import { Navbar, Nav, Container, Button, Badge } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { ThemeContext } from "../context/Theme/context";
+import { FavoritesContext } from "../context/Favorites/context";
 
 function Header() {
   const { themeState, themeDispatch } = useContext(ThemeContext);
+  const { favoritesState } = useContext(FavoritesContext);
 
   const toggleTheme = () => {
     themeDispatch({
@@ -31,6 +33,16 @@ function Header() {
 
             <LinkContainer to="/about">
               <Nav.Link>Despre</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/favorites">
+              <Nav.Link>
+                Favorite{" "}
+                {favoritesState.favorites.length > 0 && (
+                  <Badge bg="primary" pill>
+                    {favoritesState.favorites.length}
+                  </Badge>
+                )}
+              </Nav.Link>
             </LinkContainer>
           </Nav>
 
