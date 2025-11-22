@@ -1,0 +1,39 @@
+.movie-card img {
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+.movie-card:hover img {
+  transform: scale(1.05);
+}
+.card img {
+  border-radius: 8px 8px 0 0;
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+.input-group-text {
+  background-color: #f8f9fa;
+  font-size: 1.2rem;
+}
+.card {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ddd;
+  letter-spacing: 0.5px;
+}
