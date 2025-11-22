@@ -9,7 +9,7 @@ export function Home() {
 
   const [trending, setTrending] = useState([]); // ⭐ Tendințe
 
-  // 🔥 Fetch trending movies la încărcarea paginii
+  // Fetch trending movies
   useEffect(() => {
     fetch(
       "https://api.themoviedb.org/3/trending/movie/day?api_key=b43cba9094fc86343f96b7ffad2f0c7f"
@@ -19,7 +19,7 @@ export function Home() {
       .catch((err) => console.error("Eroare trending:", err));
   }, []);
 
-  // 🔎 Search filme
+  // Cauta filme
   const search = () => {
     if (!query) return;
 
@@ -106,7 +106,7 @@ export function Home() {
         </div>
       )}
 
-      {/* ⭐ TRENDING SECTION */}
+      {/* TRENDING SECTION */}
       {trending.length > 0 && (
         <>
           <h2 className="section-title mt-5">Tendințe azi 🔥</h2>
