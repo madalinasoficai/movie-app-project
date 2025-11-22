@@ -9,7 +9,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 
-// importăm hook-ul nostru
+// import hook
 import { useFetch } from "../utils/useFetch";
 
 function MovieDetails() {
@@ -23,7 +23,7 @@ function MovieDetails() {
   const trailerUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=b43cba9094fc86343f96b7ffad2f0c7f`;
   const recommendationsUrl = `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=b43cba9094fc86343f96b7ffad2f0c7f`;
 
-  // --- folosim useFetch ---
+  // --- useFetch ---
   const { data: movie, isLoading: loadingMovie } = useFetch(movieUrl);
   const { data: trailerData } = useFetch(trailerUrl);
   const { data: recommendationsData } = useFetch(recommendationsUrl);
